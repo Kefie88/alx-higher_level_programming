@@ -64,3 +64,23 @@ void free_listint(listint_t *head)
 		free(current);
 	}
 }
+ /**
+  * add_nodeint - adds a  new node at the begginning of a listint_t list
+  * @head: first node address
+  * @n: integer to insert into the new node
+  * Return: address of the new element or NULL if it fails
+  */
+listint_t *insert_node(listint_t **head, int number)
+{
+	listint_t *tmp;
+	
+	tmp = malloc(sizeof(listint_t));
+	if (tmp == NULL)
+		return (NULL);
+	tmp->number = number;
+	tmp->next = *head;
+	*head = tmp;
+	return (*head);
+}
+			  ~
+
