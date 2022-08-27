@@ -16,7 +16,7 @@ def arg_calc(argv):
         print("{:d} {:s} {:d} = {:d}".format(a, op, b, mul(a, b)))
     elif op == '/':
          print("{:d} {:s} {:d} = {:d}".format(a, op, b, div(a, b)))
-     else:
+    else:
          print("Unknown operator. Available operators: +, -, * and /")
          exit(1)
 if __name__ == "__main__":
