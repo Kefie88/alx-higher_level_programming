@@ -10,7 +10,7 @@ def arg_calc(argv):
     b = int(argv[3])
     if op == '+':
         print("{:d} {:s} {:d} = {:d}".format(a, op, b, add(a, b)))
-    else op == '-':
+    elif op == '-':
         print("{:d} {:s} {:d} = {:d}".format(a, op, b, sub(a, b)))
     elif op == '*':
         print("{:d} {:s} {:d} = {:d}".format(a, op, b, mul(a, b)))
