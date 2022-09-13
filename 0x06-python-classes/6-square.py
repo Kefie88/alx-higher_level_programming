@@ -14,10 +14,12 @@ class Square:
         """
         self.size = size
         self.position = position
+    
     @property
     def size(self):
         """Get/set the currrent size of the square."""
         return (self.__size)
+    
     @size.setter
     def size(self, value):
         if not isinstance(value, int):
@@ -25,10 +27,12 @@ class Square:
         elif value < 0:
             raise ValueError("size must be >= 0")
         self.__size = value
+    
     @property
     def position(self):
         """Get/set the current position of the square."""
         return (self.__position)
+    
     @position.setter
     def position(self, value):
         if (not isinstance(value, tuple) or len(value) != 2 or not all(isinstance(num, int) for num in value) or not all(num >= 0 for num in value)):
