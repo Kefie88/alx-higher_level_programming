@@ -21,7 +21,7 @@ class Node:
             return (self.__data)
 
         @data.setter
-        def ddata(self, value):
+        def data(self, value):
             if not isinstance(Value, int):
                 raise TypeError("data must be an integer")
             self.__data = value
