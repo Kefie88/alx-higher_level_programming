@@ -7,7 +7,7 @@ def is_kind_of_class(obj, a_class):
     is an instance of, or if the object is an instacne
     of a class that inherited from, the specified class;
     otherwise returns False
-    
+
     Args:
         obj(any): Object of the class
         a_class(type): describes the class
