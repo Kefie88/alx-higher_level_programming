@@ -21,7 +21,7 @@ class Student:
         """Get a dictionary representation of the student.
         If attrs is a list of strings, represents only those attributes
         included in the list.
-        
+
         Args:
             attrs (list): The attributes to represent
         """
