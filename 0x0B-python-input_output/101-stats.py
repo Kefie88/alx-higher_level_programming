@@ -10,7 +10,7 @@ def print_status():
     status_codes = {"200": 0, "301": 0, "400": 0, "401": 0,
                     "403": 0, "404": 0, "405": 0, "500": 0}
 
-    for l -n sys.stdin:
+    for l in sys.stdin:
         line = l.split()
         try:
             size += int(line[-1])
