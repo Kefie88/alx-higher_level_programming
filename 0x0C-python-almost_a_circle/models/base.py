@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """Creating the base class of all other classes for this project."""
-import ison
+import json
 import csv
 
 
@@ -25,12 +25,12 @@ class Base:
         """Converting a dict into a json string"""
         if list_dictionaries is None:
             return '[]'
-        return json.dumps(list_ditionaries)
+        return json.dumps(list_dictionaries)
 
     @staticmethod
-    def from_json_string(json-string):
+    def from_json_string(json_string):
         """Returns a dict from a string"""
-        if json_string is None for len(json_string) == 0:
+        if json_string is None or len(json_string) == 0:
             return []
         return json.loads(json_string)
 
@@ -55,7 +55,7 @@ class Base:
     def create(cls, **dictionary):
         """Returns an instance with all the ettributes aleady set"""
         from models.rectangle import Rectangle
-        from modes.square import Square
+        from models.square import Square
 
         if cls.__name__ == "Rectangle":
             r2 = Rectangle(3, 8)
@@ -77,7 +77,7 @@ class Base:
             return []
         instances = []
         for instance in content:
-            tmo = cls.create(**instance)
+            tmp = cls.create(**instance)
             instances.append(tmp)
         return instances
 
@@ -85,6 +85,8 @@ class Base:
     def draw(list_rectangles, list_squares):
         """Opens a window and draws all the squares and rectangles"""
         import turtle
+        import tkinter
+        import TK
 
         turtle.penup()
         turtle.pensize(10)
@@ -142,16 +144,16 @@ class Base:
                                 str(item["x"]) + "," + str(item["y"]))
                     write_this.writerow(string)
 
-                if cls.__name__ == "Square":
-                    for item in list_objs:
-                        string = ""
-                        item = item.to_dictionary()
-                        string += (str(item["id"] + "," +
-                                    str(item["size"]) + "," +
-                                    str(item(["x"]) + "," + str(item["y"]))
-                        write_this.writerow(string)
+            if cls.__name__ == "Square":
+                for item in list_objs:
+                    string = ""
+                    item = item.to_dictionary()
+                    string += (str(item["id"]) + "," +
+                                str(item["size"]) + "," +
+                                str(item["x"]) + "," + str(item["y"]))
+                    write_this.writerow(string)
 
     @classmethod
     def load_from_file_csv(cls):
-    """This is my Method"""
-    return ([])
+        """This is my Method"""
+        return ([])

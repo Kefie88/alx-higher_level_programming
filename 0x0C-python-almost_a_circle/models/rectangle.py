@@ -34,7 +34,7 @@ class Rectangle(Base):
     @height.setter
     def height(self, value):
         """Setting private attribute"""
-        self.setter_validation("height", height)
+        self.setter_validation("height", value)
         self.__height = value
 
     @property
