@@ -56,7 +56,7 @@ class Rectangle(Base):
     @y.setter
     def y(self, value):
         """Setting privat attribute"""
-        self.setter_validation("y" , value)
+        self.setter_validation("y", value)
         self.__y = value
 
     def area(self):
@@ -107,4 +107,4 @@ class Rectangle(Base):
     def __str__(self):
         """Overwrite the str method"""
         return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.x, self.y,
-                                                        self.width, self.height)
+                                                      self.width, self.height)
