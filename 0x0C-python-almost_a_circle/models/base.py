@@ -86,7 +86,6 @@ class Base:
         """Opens a window and draws all the squares and rectangles"""
         import turtle
         import tkinter
-        import TK
 
         turtle.penup()
         turtle.pensize(10)
