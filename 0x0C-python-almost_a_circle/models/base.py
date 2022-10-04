@@ -48,7 +48,7 @@ class Base:
                 json_dict = json.loads(cls.to_json_string(item))
                 content.append(json_dict)
 
-        with  open(file_name, mode="w") as fd:
+        with open(file_name, mode="w") as fd:
             json.dump(content, fd)
 
     @classmethod
@@ -71,7 +71,7 @@ class Base:
         """
         file_name = cls.__name__ + ".json"
         try:
-            with open(file_name, encoding = "UTF8") as fd:
+            with open(file_name, encoding="UTF8") as fd:
                 content = cls.from_json_string(fd.read())
         except:
             return []
@@ -95,7 +95,7 @@ class Base:
         turtle.hideturtle()
         turtle.got0(-300, 300)
         turtle.speed(0)
-        
+
         for instance in list_retangles:
             turtle.pendown()
             for i in range(2):
@@ -139,9 +139,9 @@ class Base:
                     string = ""
                     item = item.to_dictionary()
                     string += (str(item["id"]) + "," +
-                                str(item["width"]) + "," +
-                                str(item["height"]) + "," +
-                                str(item["x"]) + "," + str(item["y"]))
+                            str(item["width"]) + "," +
+                            str(item["height"]) + "," +
+                            str(item["x"]) + "," + str(item["y"]))
                     write_this.writerow(string)
 
             if cls.__name__ == "Square":
@@ -149,8 +149,8 @@ class Base:
                     string = ""
                     item = item.to_dictionary()
                     string += (str(item["id"]) + "," +
-                                str(item["size"]) + "," +
-                                str(item["x"]) + "," + str(item["y"]))
+                            str(item["size"]) + "," +
+                            str(item["x"]) + "," + str(item["y"]))
                     write_this.writerow(string)
 
     @classmethod
