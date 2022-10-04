@@ -26,9 +26,9 @@ class Square(Rectangle):
     def __str__(self):
         """Module string representation of square"""
         return "[Square] ({:d}) {:d}/{:d} - {:d}".format(self.id,
-                                                        self.x,
-                                                        self.y,
-                                                        self.width)
+                self.x,
+                self.y,
+                self.width)
 
     def update(self, *args, **kwargs):
         """Module update square"""
@@ -43,7 +43,7 @@ class Square(Rectangle):
                 elif i == 3:
                     self.y = arg
         else:
-            for key,value in kwargs.items():
+            for key, value in kwargs.items():
                 if hasattr(self, key) is True:
                     setattr(self, key, value)
 
