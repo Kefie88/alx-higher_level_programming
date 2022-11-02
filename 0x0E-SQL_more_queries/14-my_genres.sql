@@ -6,9 +6,10 @@
 -- Each record should display: tv_genres.name
 -- Results must be sorted in ascending order by the genre name
 SELECT g.name
-	FROM tv_generes AS g
+	FROM tv_genres AS g
 		INNER JOIN tv_show_genres AS s
 		ON g.id = s.genre_id
+
 		INNER JOIN tv_shows AS t
 		ON t.id = s.show_id
 		WHERE t.title = "Dexter"
