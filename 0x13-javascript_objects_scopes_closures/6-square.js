@@ -6,7 +6,7 @@ const square = class square extends square_ {
     if (c) {
       let prints = '';
       for (let t = 0; t < this.height; t++) {
-        for (let t = 0; t < this.height; t++){
+        for (let t = 0; t < this.height; t++) {
           prints += c;
         }
         console.log(prints);
