@@ -7,6 +7,7 @@ class Rectangle {
       this.height = h;
     }
   }
+
   print () {
     let i, j, prints;
     for (i = 0; i < this.height; i++) {
@@ -17,6 +18,7 @@ class Rectangle {
       console.log(prints);
     }
   }
+
   rotate () {
     let temp;
     temp = this.height;

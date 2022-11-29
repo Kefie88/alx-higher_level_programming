@@ -8,13 +8,13 @@ const square = class square extends square_ {
       for (let t = 0; t < this.height; t++) {
         for (let t = 0; t < this.height; t++){
           prints += c;
-	} 
+        }
         console.log(prints);
         prints = '';
-      } 
+      }
     } else {
       super.print();
-      }
+    }
   }
 };
 module.exports = square;
