@@ -14,8 +14,8 @@ if __name__ == "__main__":
             pool_pre_ping=True)
     session = sessionmaker(bind=engine)
     session = session()
-    result = session.query(State).first()
-    if result is None:
+    state = session.query(State).first()
+    if state is None:
         print("Nothing")
     print('{}: {}'.format(state.id, state.name))
     session.close()
