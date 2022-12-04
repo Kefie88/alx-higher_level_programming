@@ -13,6 +13,8 @@ if __name__ == "__main__":
             .format(argv[1], argv[2], argv[3]))
     session = sessionmaker(bind=engine)
     session = Session()
-    from state in session.query(State).order_by(State.id):
+    reslt = session.query(State).first()
+    if result is None:
+        print("Nothing")
     print('{}: {}'.format(state.id, state.name))
     session.close()
