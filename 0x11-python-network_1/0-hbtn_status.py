@@ -1,11 +1,9 @@
 #!/usr/bin/python3
 """ Script that fetches from a url using urllib package"""
 
-import urllib.request
-
+import urllib
 
 if __name__ == "__main__":
-
     with urllib.request.urlopen('https://intranet.hbtn.io/status') as respo:
         cont = respo.read()
         print("Body response:")
