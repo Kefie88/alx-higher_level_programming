@@ -8,5 +8,5 @@ const write_ = process.argv[3];
 fs.writeFile(file, write_, 'utf8', function (error) {
   if (error) {
     console.log(error);
- }
+  }
 });
