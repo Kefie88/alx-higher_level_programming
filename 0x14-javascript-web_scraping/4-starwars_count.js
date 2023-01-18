@@ -3,8 +3,8 @@
 // the character Wedge Antilles is present
 
 const args = process.argv;
-let reqURL = args[2];
-let request = require('request');
+const reqURL = args[2];
+const request = require('request');
 request(reqURL, function (error, response, body) {
   if (error) {
     console.log('error:', error);
