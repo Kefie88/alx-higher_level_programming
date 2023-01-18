@@ -7,7 +7,7 @@ let reqURL = args[2];
 let request = require('request');
 request(reqURL, function (error, response, body) {
   if (error) {
-    console.log('error:', error); // Print the error if one occurred
+    console.log('error:', error);
   } else {
     let jso = JSON.parse(body);
     let results = jso['results'];
