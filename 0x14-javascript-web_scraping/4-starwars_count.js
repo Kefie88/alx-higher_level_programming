@@ -11,7 +11,7 @@ request(reqURL, function (error, response, body) {
   } else {
     const jso = JSON.parse(body);
     const results = jso['results'];
-    const count = 0;
+    let count = 0;
     for (let i = 0; i < results.length; i++) {
       const chars = (results[i]['characters']);
       for (let j = 0; j < chars.length; j++) {
